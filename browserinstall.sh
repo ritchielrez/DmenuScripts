@@ -15,4 +15,6 @@ options[firefox]="Firefox"
 options[google-chrome]="Google Chrome"
 options[vivaldi]="Vivaldi"
 
+choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -p "Pick up a browser to install")
+
 
