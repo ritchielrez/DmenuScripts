@@ -23,3 +23,11 @@ whichcmd="which ${choice}"
 # a variable to store the output of which command to check 
 # if user selected browser is installed
 isinstalled=$($whichcmd)
+
+echo $isinstalled
+
+if [[ $isinstalled == "" ]]; then
+	zenity --warning --text="Browser isn't installed\!" --title="!!!"
+else
+	zenity --warning --text="Browser is installed\!" --title="!!!"
+fi
