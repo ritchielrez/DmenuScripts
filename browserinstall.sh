@@ -27,7 +27,7 @@ isinstalled=$($whichcmd)
 echo $isinstalled
 
 if [[ $isinstalled == "i" ]]; then
-	zenity --warning --text="Browser isn't installed\!" --title="!!!"
+	zenity --info --text="Browser isn't installed\!" --title="!!!"
 else
 	if [[ $choice == "brave-browser" ]]; then
 		zenity --info --text="Brave is installing\!" --title="!!!"	
