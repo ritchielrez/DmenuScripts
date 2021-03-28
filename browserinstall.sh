@@ -30,14 +30,14 @@ if [[ $isinstalled == "i" ]]; then
 	zenity --warning --text="Browser isn't installed\!" --title="!!!"
 else
 	if [[ $choice == "brave-browser" ]]; then
-		zenity --warning --text="Brave is installing\!" --title="!!!"	
+		zenity --info --text="Brave is installing\!" --title="!!!"	
 	elif [[ $choice == "chromium-browser" ]]; then
-		zenity --warning --text="Chromium is installing\!" --title="!!!"	
+		zenity --info --text="Chromium is installing\!" --title="!!!"	
 	elif [[ $choice == "firefox" ]]; then
-		zenity --warning --text="Firefox is installing\!" --title="!!!"	
+		zenity --info --text="Firefox is installing\!" --title="!!!"	
 	elif [[ $choice == "google-chrome" ]]; then
-		zenity --warning --text="Google Chrome is installing\!" --title="!!!"	
+		zenity --info --text="Google Chrome is installing\!" --title="!!!"	
 	elif [[ $choice == "vivaldi" ]]; then
-		zenity --warning --text="Vivaldi is installing\!" --title="!!!"	
+		zenity --info --text="Vivaldi is installing\!" --title="!!!"	
 	fi
 fi
