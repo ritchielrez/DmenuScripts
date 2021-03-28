@@ -16,6 +16,10 @@ declare -a options=(
 "vivaldi"
 )
 
+# An variable to store the browser name to install
 choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -p "Pick up a browser to install")
 
-
+whichcmd="which ${choice}"
+# a variable to store the output of which command to check 
+# if user selected browser is installed
+isinstalled=$($whichcmd)
