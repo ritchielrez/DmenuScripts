@@ -26,8 +26,18 @@ isinstalled=$($whichcmd)
 
 echo $isinstalled
 
-if [[ $isinstalled == "" ]]; then
+if [[ $isinstalled == "i" ]]; then
 	zenity --warning --text="Browser isn't installed\!" --title="!!!"
 else
-	zenity --warning --text="Browser is installed\!" --title="!!!"
+	if [[ $choice == "brave-browser" ]]; then
+		zenity --warning --text="Brave is installing\!" --title="!!!"	
+	elif [[ $choice == "chromium-browser" ]]; then
+		zenity --warning --text="Chromium is installing\!" --title="!!!"	
+	elif [[ $choice == "firefox" ]]; then
+		zenity --warning --text="Firefox is installing\!" --title="!!!"	
+	elif [[ $choice == "google-chrome" ]]; then
+		zenity --warning --text="Google Chrome is installing\!" --title="!!!"	
+	elif [[ $choice == "vivaldi" ]]; then
+		zenity --warning --text="Vivaldi is installing\!" --title="!!!"	
+	fi
 fi
