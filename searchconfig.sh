@@ -2,6 +2,7 @@ DMEDITOR="konsole -e vim"
 
 declare -a options=(
 "bash - $HOME/.bashrc"
+"fusuma - $HOME/.config/fusuma/config.yml"
 "rofi - $HOME/.config/rofi/config"
 "vim - $HOME/.vimrc"
 "quit"
