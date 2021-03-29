@@ -1,8 +1,0 @@
---2021-03-29 19:17:27--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-Resolving dl.google.com (dl.google.com)... 142.250.67.46, 2404:6800:4002:808::200e
-Connecting to dl.google.com (dl.google.com)|142.250.67.46|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 75841728 (72M) [application/x-debian-package]
-Saving to: ‘~/Downloads/google-chrome-stable_current_amd64.deb.9’
-
-     google-chrom   0%[             ] 353.29K   398KB/s                   google-chrome   1%[             ] 753.29K   691KB/s                  google-chrome-   1%[             ]   1.09M   855KB/s                 google-chrome-s   1%[             ]   1.32M   895KB/s                google-chrome-st   1%[             ]   1.45M   740KB/s               google-chrome-sta   2%[             ]   2.12M   985KB/s               oogle-chrome-stab   3%[             ]   2.35M  1001KB/s               ogle-chrome-stabl   3%[             ]   2.59M  1014KB/s               
