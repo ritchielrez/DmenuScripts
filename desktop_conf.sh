@@ -1,12 +1,18 @@
 #!/bin/bash
+# Created by: Ritchiel Reza
+# Github profile: www.github.com/ritchielrez/
+#### A script to set up my Linux desktop
 
 ### Install all the deps: 
 
 if command -v pacman &> /dev/null
 then
+
 	sudo pacman -S github-cli git exa stow figlet lolcat base-devel vim wget
+
 elif command -v apt-get &> /dev/null
 then
+
 # 	curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
 # 	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 
@@ -15,10 +21,15 @@ then
 
 # 	sudo apt-get install alacritty gh stow git figlet unzip vim wget python3-pip -y
 
+    # Discord canary
 # 	sudo apt install ./discord-canary-0.0.131.deb -y
 
+    # Nodejs and npm
 # 	sudo sh -c "curl -sfLS https://install-node.vercel.app | bash -s --"
 # 
+    # Zoom
+    # sudo apt install ./zoom_amd64.deb -y
+
 # 	# VSCode
 # 	wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 # 	sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -38,11 +49,12 @@ then
 	#echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 	sudo apt-get update
 	#sudo apt-get install spotify-client -y
+
 fi
 figlet "Deps now all Installed"
 
 ### Dotfiles
-gh auth login
+# gh auth login
 
 cd ~
 # gh repo clone ritchielrez/dotfiles
@@ -76,10 +88,15 @@ cd ~
 # wget https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh
 chmod a+x install.sh
 
+# Install the deps
 # sudo npm -g install neovim tree-sitter-cli
 # pip3 install pynvim
 
 # bash install.sh
+
+
+
+
 
 
 
