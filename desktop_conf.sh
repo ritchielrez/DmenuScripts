@@ -2,18 +2,18 @@
 
 ### Install all the deps: 
 
-# if command -v pacman &> /dev/null
-# then
-# 	sudo pacman -S github-cli git exa stow figlet lolcat base-devel vim
-# elif command -v apt-get &> /dev/null
-# then
+if command -v pacman &> /dev/null
+then
+	sudo pacman -S github-cli git exa stow figlet lolcat base-devel vim wget
+elif command -v apt-get &> /dev/null
+then
 # 	curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
 # 	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 
 # 	sudo add-apt-repository ppa:mmstick76/alacritty -y
 # 	sudo apt update
 
-# 	sudo apt-get install alacritty gh stow git figlet unzip vim -y
+# 	sudo apt-get install alacritty gh stow git figlet unzip vim wget python3-pip -y
 
 # 	sudo apt install ./discord-canary-0.0.131.deb -y
 
@@ -27,7 +27,12 @@
 # 	sudo apt install apt-transport-https -y
 # 	sudo apt update
 # 	sudo apt install code -y
-# fi
+	
+	# Neovim
+	#sudo add-apt-repository ppa:neovim-ppa/unstable -y
+	sudo apt update
+	#sudo apt install neovim -y
+fi
 figlet "Deps now all Installed"
 
 ### Dotfiles
@@ -47,12 +52,28 @@ stow -vSt ~ git
 # Config alacritty
 mv ~/.config/alacritty ~/.config/alacritty.okd
 stow -vSt ~ alacritty
-mkdir NerdFont && cd NerdFont
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
-unzip Hack.zip
-sudo mv *.ttf /usr/share/fonts
-sudo fc-cache -f -v
+#mkdir NerdFont && cd NerdFont
+#wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+#unzip Hack.zip
+#sudo mv *.ttf /usr/share/fonts
+#sudo fc-cache -f -v
 
 ### Install powercord now
+#cd ~
+#git clone https://github.com/powercord-org/powercord
+#cd powercord
+#npm i
+#sudo npm run plug
+
+### Install lunarvim
+cd ~
+# wget https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh
+chmod a+x install.sh
+
+# sudo npm -g install neovim tree-sitter-cli
+# pip3 install pynvim
+
+# bash install.sh
+
 
 

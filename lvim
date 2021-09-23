@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-/home/ritux/.config/lvim}"
+export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-/home/ritux/.local/share/lunarvim}"
+
+exec nvim -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
