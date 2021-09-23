@@ -56,7 +56,7 @@ figlet "Deps now all Installed"
 ### Dotfiles
 # gh auth login
 
-cd ~
+pushd ~
 # gh repo clone ritchielrez/dotfiles
 cd ~/dotfiles
 
@@ -94,9 +94,21 @@ chmod a+x install.sh
 
 # bash install.sh
 
+### Install spicetify-cli
+#sudo chmod a+wr /usr/share/spotify
+#sudo chmod a+wr /usr/share/spotify/Apps -R
 
+#curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh -o /tmp/install.sh
+#sh /tmp/install.sh
 
+#git clone https://github.com/morpheusthewhite/spicetify-themes.git ~/.config/spicetify/Themes
 
+### Disable hardware accelaration for Spotify
+mkdir -p ~/Documents/
+sudo mv /usr/local/share/applications/spotify.desktop ~/Documents/spotify.desktop.bak
+mkdir -p ~/.local/share/applications/
+popd && cp ./spotify.desktop ~/.local/share/applications/
+sudo update-desktop-database
 
-
-
+### Install rustup
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
