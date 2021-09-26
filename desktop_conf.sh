@@ -1,6 +1,6 @@
 #!/bin/bash
-# Created by: Ritchiel Reza
-# Github profile: www.github.com/ritchielrez/
+#### Created by: Ritchiel Reza
+#### Github profile: github.com/ritchielrez/
 #### A script to set up my Linux desktop
 
 ### Install all the deps: 
@@ -26,11 +26,11 @@ then
 
     # Nodejs and npm
  	sudo sh -c "curl -sfLS https://install-node.vercel.app | bash -s --"
-# 
+ 
     # Zoom
         sudo apt install ./zoom_amd64.deb -y
 
-# 	# VSCode
+ 	# VSCode
  	wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
  	sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
  	sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -113,10 +113,11 @@ git clone https://github.com/morpheusthewhite/spicetify-themes.git ~/.config/spi
 ### Disable hardware accelaration for Spotify
 mkdir -p ~/Documents/
 sudo mv /usr/local/share/applications/spotify.desktop ~/Documents/spotify.desktop.bak
+sudo mv /usr/share/applications/spotify.desktop ~/Documents/spotify.desktop.bak
 mkdir -p ~/.local/share/applications/
 popd && cp ./spotify.desktop ~/.local/share/applications/
 sudo update-desktop-database
 
 ### Install rustup
-#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
