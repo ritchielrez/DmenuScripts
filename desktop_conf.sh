@@ -75,9 +75,6 @@ stow -vSt ~ git
 mv ~/.config/alacritty ~/.config/alacritty.okd
 stow -vSt ~ alacritty
 mkdir NerdFont && cd NerdFont
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
-unzip Hack.zip
-sudo mv *.ttf /usr/share/fonts
 sudo fc-cache -f -v
 
 ### Install powercord now
